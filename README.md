@@ -1,10 +1,14 @@
 # Rolls & Responders
 
 [![CI](https://github.com/joris-decombe/rolls-and-responders-app/workflows/CI/badge.svg)](https://github.com/joris-decombe/rolls-and-responders-app/actions)
+[![Deploy](https://github.com/joris-decombe/rolls-and-responders-app/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/joris-decombe/rolls-and-responders-app/actions/workflows/deploy.yml)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 An interactive tabletop exercise application for testing cybersecurity incident response plans.
 
 Based on the [NCSC New Zealand "Rolls & Responders"](https://www.ncsc.govt.nz/protect-your-organisation/rolls-and-responders/) framework (Creative Commons Attribution 4.0 NZ).
+
+**🎮 [Try it live](https://joris-decombe.github.io/rolls-and-responders-app/)** | **📦 [Download Latest Release](https://github.com/joris-decombe/rolls-and-responders-app/releases/latest)**
 
 ![Landing Page](.github/screenshots/01-landing.png)
 
@@ -18,6 +22,16 @@ Based on the [NCSC New Zealand "Rolls & Responders"](https://www.ncsc.govt.nz/pr
 
 ## Quick Start
 
+### Option 1: Use the Live App (Recommended)
+
+Visit **[https://joris-decombe.github.io/rolls-and-responders-app/](https://joris-decombe.github.io/rolls-and-responders-app/)**
+
+Open in two browser windows:
+1. **Window 1**: Select "Facilitator Console"
+2. **Window 2**: Select "Player Display" (project on shared screen)
+
+### Option 2: Run Locally
+
 ```bash
 # Install dependencies
 npm install
@@ -26,9 +40,11 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173 in two browser windows:
-1. **Window 1**: Select "Facilitator Console"
-2. **Window 2**: Select "Player Display" (project on shared screen)
+Open http://localhost:5173 in two browser windows as above.
+
+### Option 3: Self-Host
+
+Download the latest release and serve the `dist/` folder with any static web server.
 
 ## Screenshots
 

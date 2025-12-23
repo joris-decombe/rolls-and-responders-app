@@ -8,6 +8,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The app simulates incident response scenarios with dice-based mechanics (D20 system), allowing teams to practice their response procedures in a structured, gamified format.
 
+### Live Application
+
+- **Production**: https://joris-decombe.github.io/rolls-and-responders-app/
+- **Repository**: https://github.com/joris-decombe/rolls-and-responders-app
+- **Latest Release**: https://github.com/joris-decombe/rolls-and-responders-app/releases/latest
+
 ### Official NCSC Resources
 
 - **Main Resource Page**: https://www.ncsc.govt.nz/protect-your-organisation/rolls-and-responders/
@@ -28,6 +34,24 @@ npm run preview
 # Lint code
 npm run lint
 ```
+
+## Deployment
+
+The app is automatically deployed to GitHub Pages when changes are pushed to `main`:
+
+1. **CI Workflow** (`.github/workflows/ci.yml`): Runs on PRs and pushes to main
+   - Lints code with ESLint
+   - Builds production bundle
+
+2. **Deploy Workflow** (`.github/workflows/deploy.yml`): Deploys to GitHub Pages
+   - Triggered on push to `main` or manual workflow dispatch
+   - Builds app and deploys to https://joris-decombe.github.io/rolls-and-responders-app/
+
+3. **Release Workflow** (`.github/workflows/release.yml`): Creates GitHub releases
+   - Triggered when a version tag is pushed (e.g., `v1.0.0`)
+   - Creates release with changelog and distribution archives
+
+**Important**: The Vite config includes `base: '/rolls-and-responders-app/'` for GitHub Pages routing.
 
 ## Architecture
 
